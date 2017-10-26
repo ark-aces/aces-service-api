@@ -1,0 +1,205 @@
+swagger: '2.0'
+info:
+  title: Aces Service API
+  description: |
+    API Specification for Aces Services for blockchain interoperability.
+  version: "0.1.0"
+schemes:
+  - https
+  - http
+basePath: /v1
+produces:
+  - application/json
+paths:
+  /status:
+    get:
+      summary: Get Health of node.
+      description: Get application health information.
+      responses:
+        200:
+          description: Health information.
+          schema:
+            $ref: "#/definitions/Health"
+  /info:
+    get:
+      summary: Get Service Info.
+      description: Gets Service Info object.
+      responses:
+        200:
+          description: The Service Info object.
+          schema:
+            $ref: '#/definitions/Info'
+  /contracts:
+    post:
+      summary: Create Service Contract
+      description: Creates a new service contract.
+      parameters:
+        - in: body
+          name: ContractRequest
+          description: The request to create a new contract.
+          schema:
+            type: object
+            required:
+              - correlationId
+            properties:
+              correlationId:
+                type: string
+                description: Requestor generated globally unique identifier for correleating requests.
+              arguments:
+                type: array
+                items:
+                  $ref: "#/definitions/Argument"
+      responses:
+        200:
+          description: The created Service Contract object.
+          schema:
+            $ref: '#/definitions/Contract'
+        400:
+          $ref: "#/responses/BadRequest"
+        404:
+          $ref: "#/responses/NotFound"
+
+  /contracts/{id}:
+    get:
+      summary: Get Service Contract.
+      description: Gets service contract info for a contract.
+      parameters:
+        -
+          name: id
+          in: path
+          description: Contract identifier.
+          type: string
+          required: true
+      responses:
+        200:
+          description: The Service Contract object.
+          schema:
+            $ref: '#/definitions/Contract'
+        404:
+          $ref: "#/responses/NotFound"
+responses:
+  BadRequest:
+    description: The request was invalid.
+    schema:
+      $ref: "#/definitions/ValidationError"
+  NotFound:
+    description: The specified resource was not found.
+    schema:
+      $ref: "#/definitions/NotFoundError"
+
+definitions:
+  Info:
+    type: object
+    properties:
+      name:
+        type: string
+        description: Name of the contract service.
+      description:
+        type: string
+        description: Description of the contract service.
+      instructions:
+        type: string
+        description: Service usage instructions in markdown format.
+      capacities:
+        type: array
+        items:
+          $ref: "#/definitions/Capacity"
+      flatFee:
+        type: string
+      contractSchema:
+        type: object
+        description: Contract input schema in JSON Schema format.
+      features:
+        type: array
+        items:
+          $ref: "#/definitions/Feature"
+  Contract:
+    type: object
+    properties:
+      id:
+        type: string
+        description: The globally unique Contract ID.
+      created_at:
+        type: string
+        format: date-time
+        description: Date the Contract was created.
+      expires_at:
+        type: string
+        format: date-time
+        description: Date the Contract will expire. Any expired contracts will no longer attempt execution.
+      correlationId:
+        type: string
+        description: Requestor generated globally unique identifier for correleating requests.
+      status:
+        type: string
+        enum: [new, pendingPayment, rejected, expired, executed, failed]
+      results:
+        type: array
+        items:
+          $ref: "#/definitions/Result"
+  Argument:
+    type: object
+    properties:
+      name:
+        type: string
+        description: Argument name matching a parameter in service contract schema.
+      value:
+        type: object
+        description: Arugment value.
+  Health:
+    type: object
+    properties:
+      status:
+        type: string
+        enum: [up, down]
+  Capacity:
+    type: object
+    properties:
+      value:
+        type: number
+        description: The capacity value.
+      unit:
+        type: string
+        description: The unit type of given capacity, i.e. "ETH".
+      displayValue:
+        type: string
+        description: The formatted display value of the capacity, i.e. "250.00 ETH"
+  Feature:
+    type: string
+    enum: [arkSmartbridgePayable, arkReturnable]
+  Result:
+    type: object
+    properties:
+      name:
+        type: string
+        description: Result property name.
+      value:
+        type: object
+        description: Result value.
+  ValidationError:
+    type: object
+    properties:
+      code:
+        type: string
+      message:
+        type: string
+      field_errors:
+        type: array
+        items:
+          $ref: "#/definitions/FieldError"
+  FieldError:
+    type: object
+    properties:
+      field:
+        type: string
+      code:
+        type: string
+      message:
+        type: string
+  NotFoundError:
+    type: object
+    properties:
+      code:
+        type: string
+      message:
+        type: string
