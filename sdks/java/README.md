@@ -58,10 +58,10 @@ Please follow the [installation](#installation) instruction and execute the foll
 
 ```java
 
-import invalidPackageName.*;
-import invalidPackageName.auth.*;
+import io.arkaces.*;
+import io.arkaces.auth.*;
 import io.swagger.client.model.*;
-import ArkAces_ServiceClient.DefaultApi;
+import io.arkaces.service_client.DefaultApi;
 
 import java.io.File;
 import java.util.*;

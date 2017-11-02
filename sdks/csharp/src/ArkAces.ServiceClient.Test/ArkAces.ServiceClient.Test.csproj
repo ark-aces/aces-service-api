@@ -75,7 +75,7 @@ OpenAPI spec version: 0.1.0
   <Import Project="$(MsBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
       <ProjectReference Include="..\ArkAces.ServiceClient\ArkAces.ServiceClient.csproj">
-          <Project>{F119818B-F43E-4D2A-889D-D1415B262CE4}</Project>
+          <Project>{26117B1F-E029-405D-B537-3853B1F42050}</Project>
           <Name>ArkAces.ServiceClient</Name>
       </ProjectReference>
   </ItemGroup>

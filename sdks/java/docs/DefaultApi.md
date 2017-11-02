@@ -21,8 +21,8 @@ Gets service contract info for a contract.
 ### Example
 ```java
 // Import classes:
-//import invalidPackageName.ApiException;
-//import ArkAces_ServiceClient.DefaultApi;
+//import io.arkaces.ApiException;
+//import io.arkaces.service_client.DefaultApi;
 
 
 DefaultApi apiInstance = new DefaultApi();
@@ -66,8 +66,8 @@ Creates a new service contract.
 ### Example
 ```java
 // Import classes:
-//import invalidPackageName.ApiException;
-//import ArkAces_ServiceClient.DefaultApi;
+//import io.arkaces.ApiException;
+//import io.arkaces.service_client.DefaultApi;
 
 
 DefaultApi apiInstance = new DefaultApi();
@@ -111,8 +111,8 @@ Gets Service Info object.
 ### Example
 ```java
 // Import classes:
-//import invalidPackageName.ApiException;
-//import ArkAces_ServiceClient.DefaultApi;
+//import io.arkaces.ApiException;
+//import io.arkaces.service_client.DefaultApi;
 
 
 DefaultApi apiInstance = new DefaultApi();
@@ -152,8 +152,8 @@ Get application health information.
 ### Example
 ```java
 // Import classes:
-//import invalidPackageName.ApiException;
-//import ArkAces_ServiceClient.DefaultApi;
+//import io.arkaces.ApiException;
+//import io.arkaces.service_client.DefaultApi;
 
 
 DefaultApi apiInstance = new DefaultApi();

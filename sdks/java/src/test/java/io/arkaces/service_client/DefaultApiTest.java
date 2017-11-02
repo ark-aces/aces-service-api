@@ -11,9 +11,9 @@
  */
 
 
-package ArkAces_ServiceClient;
+package io.arkaces.service_client;
 
-import invalidPackageName.ApiException;
+import io.arkaces.ApiException;
 import io.swagger.client.model.Contract;
 import io.swagger.client.model.ContractRequest;
 import io.swagger.client.model.Health;
