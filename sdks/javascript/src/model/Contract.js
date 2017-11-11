@@ -60,11 +60,11 @@ export default class Contract {
             if (data.hasOwnProperty('id')) {
                 obj['id'] = ApiClient.convertToType(data['id'], 'String');
             }
-            if (data.hasOwnProperty('created_at')) {
-                obj['created_at'] = ApiClient.convertToType(data['created_at'], 'Date');
+            if (data.hasOwnProperty('createdAt')) {
+                obj['createdAt'] = ApiClient.convertToType(data['createdAt'], 'Date');
             }
-            if (data.hasOwnProperty('expires_at')) {
-                obj['expires_at'] = ApiClient.convertToType(data['expires_at'], 'Date');
+            if (data.hasOwnProperty('expiresAt')) {
+                obj['expiresAt'] = ApiClient.convertToType(data['expiresAt'], 'Date');
             }
             if (data.hasOwnProperty('correlationId')) {
                 obj['correlationId'] = ApiClient.convertToType(data['correlationId'], 'String');
@@ -86,14 +86,14 @@ export default class Contract {
     id = undefined;
     /**
     * Date the Contract was created.
-    * @member {Date} created_at
+    * @member {Date} createdAt
     */
-    created_at = undefined;
+    createdAt = undefined;
     /**
     * Date the Contract will expire. Any expired contracts will no longer attempt execution.
-    * @member {Date} expires_at
+    * @member {Date} expiresAt
     */
-    expires_at = undefined;
+    expiresAt = undefined;
     /**
     * Requestor generated globally unique identifier for correleating requests.
     * @member {String} correlationId

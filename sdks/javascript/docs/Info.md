@@ -8,7 +8,8 @@ Name | Type | Description | Notes
 **instructions** | **String** | Service usage instructions in markdown format. | [optional] 
 **capacities** | [**[Capacity]**](Capacity.md) |  | [optional] 
 **flatFee** | **String** |  | [optional] 
+**percentFee** | **String** |  | [optional] 
 **contractSchema** | **Object** | Contract input schema in JSON Schema format. | [optional] 
-**features** | [**[Feature]**](Feature.md) |  | [optional] 
+**interfaces** | [**[ModelInterface]**](ModelInterface.md) |  | [optional] 
 
 

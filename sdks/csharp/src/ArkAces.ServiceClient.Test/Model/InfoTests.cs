@@ -107,6 +107,14 @@ namespace ArkAces.ServiceClient.Test
             // TODO unit test for the property 'FlatFee'
         }
         /// <summary>
+        /// Test the property 'PercentFee'
+        /// </summary>
+        [Test]
+        public void PercentFeeTest()
+        {
+            // TODO unit test for the property 'PercentFee'
+        }
+        /// <summary>
         /// Test the property 'ContractSchema'
         /// </summary>
         [Test]
@@ -115,12 +123,12 @@ namespace ArkAces.ServiceClient.Test
             // TODO unit test for the property 'ContractSchema'
         }
         /// <summary>
-        /// Test the property 'Features'
+        /// Test the property 'Interfaces'
         /// </summary>
         [Test]
-        public void FeaturesTest()
+        public void InterfacesTest()
         {
-            // TODO unit test for the property 'Features'
+            // TODO unit test for the property 'Interfaces'
         }
 
     }

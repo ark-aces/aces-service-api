@@ -35,10 +35,10 @@ public class Contract {
   @SerializedName("id")
   private String id = null;
 
-  @SerializedName("created_at")
+  @SerializedName("createdAt")
   private OffsetDateTime createdAt = null;
 
-  @SerializedName("expires_at")
+  @SerializedName("expiresAt")
   private OffsetDateTime expiresAt = null;
 
   @SerializedName("correlationId")

@@ -112,6 +112,13 @@ class InfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "percentFee"
+     */
+    public function testPropertyPercentFee()
+    {
+    }
+
+    /**
      * Test attribute "contractSchema"
      */
     public function testPropertyContractSchema()
@@ -119,9 +126,9 @@ class InfoTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "features"
+     * Test attribute "interfaces"
      */
-    public function testPropertyFeatures()
+    public function testPropertyInterfaces()
     {
     }
 }

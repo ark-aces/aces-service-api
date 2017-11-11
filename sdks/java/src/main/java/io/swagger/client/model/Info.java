@@ -22,7 +22,7 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.client.model.Capacity;
-import io.swagger.client.model.Feature;
+import io.swagger.client.model.ModelInterface;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -47,11 +47,14 @@ public class Info {
   @SerializedName("flatFee")
   private String flatFee = null;
 
+  @SerializedName("percentFee")
+  private String percentFee = null;
+
   @SerializedName("contractSchema")
   private Object contractSchema = null;
 
-  @SerializedName("features")
-  private List<Feature> features = null;
+  @SerializedName("interfaces")
+  private List<ModelInterface> interfaces = null;
 
   public Info name(String name) {
     this.name = name;
@@ -151,6 +154,24 @@ public class Info {
     this.flatFee = flatFee;
   }
 
+  public Info percentFee(String percentFee) {
+    this.percentFee = percentFee;
+    return this;
+  }
+
+   /**
+   * Get percentFee
+   * @return percentFee
+  **/
+  @ApiModelProperty(value = "")
+  public String getPercentFee() {
+    return percentFee;
+  }
+
+  public void setPercentFee(String percentFee) {
+    this.percentFee = percentFee;
+  }
+
   public Info contractSchema(Object contractSchema) {
     this.contractSchema = contractSchema;
     return this;
@@ -169,30 +190,30 @@ public class Info {
     this.contractSchema = contractSchema;
   }
 
-  public Info features(List<Feature> features) {
-    this.features = features;
+  public Info interfaces(List<ModelInterface> interfaces) {
+    this.interfaces = interfaces;
     return this;
   }
 
-  public Info addFeaturesItem(Feature featuresItem) {
-    if (this.features == null) {
-      this.features = new ArrayList<Feature>();
+  public Info addInterfacesItem(ModelInterface interfacesItem) {
+    if (this.interfaces == null) {
+      this.interfaces = new ArrayList<ModelInterface>();
     }
-    this.features.add(featuresItem);
+    this.interfaces.add(interfacesItem);
     return this;
   }
 
    /**
-   * Get features
-   * @return features
+   * Get interfaces
+   * @return interfaces
   **/
   @ApiModelProperty(value = "")
-  public List<Feature> getFeatures() {
-    return features;
+  public List<ModelInterface> getInterfaces() {
+    return interfaces;
   }
 
-  public void setFeatures(List<Feature> features) {
-    this.features = features;
+  public void setInterfaces(List<ModelInterface> interfaces) {
+    this.interfaces = interfaces;
   }
 
 
@@ -210,13 +231,14 @@ public class Info {
         Objects.equals(this.instructions, info.instructions) &&
         Objects.equals(this.capacities, info.capacities) &&
         Objects.equals(this.flatFee, info.flatFee) &&
+        Objects.equals(this.percentFee, info.percentFee) &&
         Objects.equals(this.contractSchema, info.contractSchema) &&
-        Objects.equals(this.features, info.features);
+        Objects.equals(this.interfaces, info.interfaces);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, description, instructions, capacities, flatFee, contractSchema, features);
+    return Objects.hash(name, description, instructions, capacities, flatFee, percentFee, contractSchema, interfaces);
   }
 
 
@@ -230,8 +252,9 @@ public class Info {
     sb.append("    instructions: ").append(toIndentedString(instructions)).append("\n");
     sb.append("    capacities: ").append(toIndentedString(capacities)).append("\n");
     sb.append("    flatFee: ").append(toIndentedString(flatFee)).append("\n");
+    sb.append("    percentFee: ").append(toIndentedString(percentFee)).append("\n");
     sb.append("    contractSchema: ").append(toIndentedString(contractSchema)).append("\n");
-    sb.append("    features: ").append(toIndentedString(features)).append("\n");
+    sb.append("    interfaces: ").append(toIndentedString(interfaces)).append("\n");
     sb.append("}");
     return sb.toString();
   }

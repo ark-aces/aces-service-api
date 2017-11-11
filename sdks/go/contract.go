@@ -19,10 +19,10 @@ type Contract struct {
 	Id string `json:"id,omitempty"`
 
 	// Date the Contract was created.
-	CreatedAt time.Time `json:"created_at,omitempty"`
+	CreatedAt time.Time `json:"createdAt,omitempty"`
 
 	// Date the Contract will expire. Any expired contracts will no longer attempt execution.
-	ExpiresAt time.Time `json:"expires_at,omitempty"`
+	ExpiresAt time.Time `json:"expiresAt,omitempty"`
 
 	// Requestor generated globally unique identifier for correleating requests.
 	CorrelationId string `json:"correlationId,omitempty"`

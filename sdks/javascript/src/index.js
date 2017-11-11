@@ -17,10 +17,10 @@ import Argument from './model/Argument';
 import Capacity from './model/Capacity';
 import Contract from './model/Contract';
 import ContractRequest from './model/ContractRequest';
-import Feature from './model/Feature';
 import FieldError from './model/FieldError';
 import Health from './model/Health';
 import Info from './model/Info';
+import ModelInterface from './model/ModelInterface';
 import NotFoundError from './model/NotFoundError';
 import Result from './model/Result';
 import ValidationError from './model/ValidationError';
@@ -90,12 +90,6 @@ export {
     ContractRequest,
 
     /**
-     * The Feature model constructor.
-     * @property {module:model/Feature}
-     */
-    Feature,
-
-    /**
      * The FieldError model constructor.
      * @property {module:model/FieldError}
      */
@@ -112,6 +106,12 @@ export {
      * @property {module:model/Info}
      */
     Info,
+
+    /**
+     * The ModelInterface model constructor.
+     * @property {module:model/ModelInterface}
+     */
+    ModelInterface,
 
     /**
      * The NotFoundError model constructor.

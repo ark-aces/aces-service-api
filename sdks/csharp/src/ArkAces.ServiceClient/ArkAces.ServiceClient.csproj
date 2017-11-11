@@ -12,7 +12,7 @@ OpenAPI spec version: 0.1.0
     
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{26117B1F-E029-405D-B537-3853B1F42050}</ProjectGuid>
+    <ProjectGuid>{4F396FED-B1A5-48CF-B65C-92A53BFDCF27}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ArkAces.ServiceClient</RootNamespace>

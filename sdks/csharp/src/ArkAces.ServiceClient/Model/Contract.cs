@@ -109,14 +109,14 @@ namespace ArkAces.ServiceClient.Model
         /// Date the Contract was created.
         /// </summary>
         /// <value>Date the Contract was created.</value>
-        [DataMember(Name="created_at", EmitDefaultValue=false)]
+        [DataMember(Name="createdAt", EmitDefaultValue=false)]
         public DateTime? CreatedAt { get; set; }
 
         /// <summary>
         /// Date the Contract will expire. Any expired contracts will no longer attempt execution.
         /// </summary>
         /// <value>Date the Contract will expire. Any expired contracts will no longer attempt execution.</value>
-        [DataMember(Name="expires_at", EmitDefaultValue=false)]
+        [DataMember(Name="expiresAt", EmitDefaultValue=false)]
         public DateTime? ExpiresAt { get; set; }
 
         /// <summary>

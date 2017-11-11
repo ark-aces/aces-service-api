@@ -38,17 +38,19 @@ namespace ArkAces.ServiceClient.Model
         /// <param name="Instructions">Service usage instructions in markdown format..</param>
         /// <param name="Capacities">Capacities.</param>
         /// <param name="FlatFee">FlatFee.</param>
+        /// <param name="PercentFee">PercentFee.</param>
         /// <param name="ContractSchema">Contract input schema in JSON Schema format..</param>
-        /// <param name="Features">Features.</param>
-        public Info(string Name = default(string), string Description = default(string), string Instructions = default(string), List<Capacity> Capacities = default(List<Capacity>), string FlatFee = default(string), Object ContractSchema = default(Object), List<Feature> Features = default(List<Feature>))
+        /// <param name="Interfaces">Interfaces.</param>
+        public Info(string Name = default(string), string Description = default(string), string Instructions = default(string), List<Capacity> Capacities = default(List<Capacity>), string FlatFee = default(string), string PercentFee = default(string), Object ContractSchema = default(Object), List<ModelInterface> Interfaces = default(List<ModelInterface>))
         {
             this.Name = Name;
             this.Description = Description;
             this.Instructions = Instructions;
             this.Capacities = Capacities;
             this.FlatFee = FlatFee;
+            this.PercentFee = PercentFee;
             this.ContractSchema = ContractSchema;
-            this.Features = Features;
+            this.Interfaces = Interfaces;
         }
         
         /// <summary>
@@ -85,6 +87,12 @@ namespace ArkAces.ServiceClient.Model
         public string FlatFee { get; set; }
 
         /// <summary>
+        /// Gets or Sets PercentFee
+        /// </summary>
+        [DataMember(Name="percentFee", EmitDefaultValue=false)]
+        public string PercentFee { get; set; }
+
+        /// <summary>
         /// Contract input schema in JSON Schema format.
         /// </summary>
         /// <value>Contract input schema in JSON Schema format.</value>
@@ -92,10 +100,10 @@ namespace ArkAces.ServiceClient.Model
         public Object ContractSchema { get; set; }
 
         /// <summary>
-        /// Gets or Sets Features
+        /// Gets or Sets Interfaces
         /// </summary>
-        [DataMember(Name="features", EmitDefaultValue=false)]
-        public List<Feature> Features { get; set; }
+        [DataMember(Name="interfaces", EmitDefaultValue=false)]
+        public List<ModelInterface> Interfaces { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -110,8 +118,9 @@ namespace ArkAces.ServiceClient.Model
             sb.Append("  Instructions: ").Append(Instructions).Append("\n");
             sb.Append("  Capacities: ").Append(Capacities).Append("\n");
             sb.Append("  FlatFee: ").Append(FlatFee).Append("\n");
+            sb.Append("  PercentFee: ").Append(PercentFee).Append("\n");
             sb.Append("  ContractSchema: ").Append(ContractSchema).Append("\n");
-            sb.Append("  Features: ").Append(Features).Append("\n");
+            sb.Append("  Interfaces: ").Append(Interfaces).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -172,14 +181,19 @@ namespace ArkAces.ServiceClient.Model
                     this.FlatFee.Equals(input.FlatFee))
                 ) && 
                 (
+                    this.PercentFee == input.PercentFee ||
+                    (this.PercentFee != null &&
+                    this.PercentFee.Equals(input.PercentFee))
+                ) && 
+                (
                     this.ContractSchema == input.ContractSchema ||
                     (this.ContractSchema != null &&
                     this.ContractSchema.Equals(input.ContractSchema))
                 ) && 
                 (
-                    this.Features == input.Features ||
-                    this.Features != null &&
-                    this.Features.SequenceEqual(input.Features)
+                    this.Interfaces == input.Interfaces ||
+                    this.Interfaces != null &&
+                    this.Interfaces.SequenceEqual(input.Interfaces)
                 );
         }
 
@@ -202,10 +216,12 @@ namespace ArkAces.ServiceClient.Model
                     hashCode = hashCode * 59 + this.Capacities.GetHashCode();
                 if (this.FlatFee != null)
                     hashCode = hashCode * 59 + this.FlatFee.GetHashCode();
+                if (this.PercentFee != null)
+                    hashCode = hashCode * 59 + this.PercentFee.GetHashCode();
                 if (this.ContractSchema != null)
                     hashCode = hashCode * 59 + this.ContractSchema.GetHashCode();
-                if (this.Features != null)
-                    hashCode = hashCode * 59 + this.Features.GetHashCode();
+                if (this.Interfaces != null)
+                    hashCode = hashCode * 59 + this.Interfaces.GetHashCode();
                 return hashCode;
             }
         }

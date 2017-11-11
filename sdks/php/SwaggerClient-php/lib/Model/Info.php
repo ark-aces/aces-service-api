@@ -61,8 +61,9 @@ class Info implements ModelInterface, ArrayAccess
         'instructions' => 'string',
         'capacities' => '\ArkAces\ServiceClient\Model\Capacity[]',
         'flatFee' => 'string',
+        'percentFee' => 'string',
         'contractSchema' => 'object',
-        'features' => '\ArkAces\ServiceClient\Model\Feature[]'
+        'interfaces' => '\ArkAces\ServiceClient\Model\ModelInterface[]'
     ];
 
     /**
@@ -76,8 +77,9 @@ class Info implements ModelInterface, ArrayAccess
         'instructions' => null,
         'capacities' => null,
         'flatFee' => null,
+        'percentFee' => null,
         'contractSchema' => null,
-        'features' => null
+        'interfaces' => null
     ];
 
     /**
@@ -112,8 +114,9 @@ class Info implements ModelInterface, ArrayAccess
         'instructions' => 'instructions',
         'capacities' => 'capacities',
         'flatFee' => 'flatFee',
+        'percentFee' => 'percentFee',
         'contractSchema' => 'contractSchema',
-        'features' => 'features'
+        'interfaces' => 'interfaces'
     ];
 
     /**
@@ -127,8 +130,9 @@ class Info implements ModelInterface, ArrayAccess
         'instructions' => 'setInstructions',
         'capacities' => 'setCapacities',
         'flatFee' => 'setFlatFee',
+        'percentFee' => 'setPercentFee',
         'contractSchema' => 'setContractSchema',
-        'features' => 'setFeatures'
+        'interfaces' => 'setInterfaces'
     ];
 
     /**
@@ -142,8 +146,9 @@ class Info implements ModelInterface, ArrayAccess
         'instructions' => 'getInstructions',
         'capacities' => 'getCapacities',
         'flatFee' => 'getFlatFee',
+        'percentFee' => 'getPercentFee',
         'contractSchema' => 'getContractSchema',
-        'features' => 'getFeatures'
+        'interfaces' => 'getInterfaces'
     ];
 
     /**
@@ -211,8 +216,9 @@ class Info implements ModelInterface, ArrayAccess
         $this->container['instructions'] = isset($data['instructions']) ? $data['instructions'] : null;
         $this->container['capacities'] = isset($data['capacities']) ? $data['capacities'] : null;
         $this->container['flatFee'] = isset($data['flatFee']) ? $data['flatFee'] : null;
+        $this->container['percentFee'] = isset($data['percentFee']) ? $data['percentFee'] : null;
         $this->container['contractSchema'] = isset($data['contractSchema']) ? $data['contractSchema'] : null;
-        $this->container['features'] = isset($data['features']) ? $data['features'] : null;
+        $this->container['interfaces'] = isset($data['interfaces']) ? $data['interfaces'] : null;
     }
 
     /**
@@ -361,6 +367,30 @@ class Info implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets percentFee
+     *
+     * @return string
+     */
+    public function getPercentFee()
+    {
+        return $this->container['percentFee'];
+    }
+
+    /**
+     * Sets percentFee
+     *
+     * @param string $percentFee percentFee
+     *
+     * @return $this
+     */
+    public function setPercentFee($percentFee)
+    {
+        $this->container['percentFee'] = $percentFee;
+
+        return $this;
+    }
+
+    /**
      * Gets contractSchema
      *
      * @return object
@@ -385,25 +415,25 @@ class Info implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets features
+     * Gets interfaces
      *
-     * @return \ArkAces\ServiceClient\Model\Feature[]
+     * @return \ArkAces\ServiceClient\Model\ModelInterface[]
      */
-    public function getFeatures()
+    public function getInterfaces()
     {
-        return $this->container['features'];
+        return $this->container['interfaces'];
     }
 
     /**
-     * Sets features
+     * Sets interfaces
      *
-     * @param \ArkAces\ServiceClient\Model\Feature[] $features features
+     * @param \ArkAces\ServiceClient\Model\ModelInterface[] $interfaces interfaces
      *
      * @return $this
      */
-    public function setFeatures($features)
+    public function setInterfaces($interfaces)
     {
-        $this->container['features'] = $features;
+        $this->container['interfaces'] = $interfaces;
 
         return $this;
     }

@@ -18,10 +18,10 @@ from .models.argument import Argument
 from .models.capacity import Capacity
 from .models.contract import Contract
 from .models.contract_request import ContractRequest
-from .models.feature import Feature
 from .models.field_error import FieldError
 from .models.health import Health
 from .models.info import Info
+from .models.interface import Interface
 from .models.not_found_error import NotFoundError
 from .models.result import Result
 from .models.validation_error import ValidationError

@@ -106,24 +106,26 @@ definitions:
           $ref: "#/definitions/Capacity"
       flatFee:
         type: string
+      percentFee:
+        type: string
       contractSchema:
         type: object
         description: Contract input schema in JSON Schema format.
-      features:
+      interfaces:
         type: array
         items:
-          $ref: "#/definitions/Feature"
+          $ref: "#/definitions/Interface"
   Contract:
     type: object
     properties:
       id:
         type: string
         description: The globally unique Contract ID.
-      created_at:
+      createdAt:
         type: string
         format: date-time
         description: Date the Contract was created.
-      expires_at:
+      expiresAt:
         type: string
         format: date-time
         description: Date the Contract will expire. Any expired contracts will no longer attempt execution.
@@ -164,7 +166,7 @@ definitions:
       displayValue:
         type: string
         description: The formatted display value of the capacity, i.e. "250.00 ETH"
-  Feature:
+  Interface:
     type: string
     enum: [arkSmartbridgePayable, arkReturnable]
   Result:
@@ -183,7 +185,7 @@ definitions:
         type: string
       message:
         type: string
-      field_errors:
+      fieldErrors:
         type: array
         items:
           $ref: "#/definitions/FieldError"

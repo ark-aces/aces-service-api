@@ -14,7 +14,7 @@
 
 import ApiClient from '../ApiClient';
 import Capacity from './Capacity';
-import Feature from './Feature';
+import ModelInterface from './ModelInterface';
 
 
 
@@ -73,11 +73,14 @@ export default class Info {
             if (data.hasOwnProperty('flatFee')) {
                 obj['flatFee'] = ApiClient.convertToType(data['flatFee'], 'String');
             }
+            if (data.hasOwnProperty('percentFee')) {
+                obj['percentFee'] = ApiClient.convertToType(data['percentFee'], 'String');
+            }
             if (data.hasOwnProperty('contractSchema')) {
                 obj['contractSchema'] = ApiClient.convertToType(data['contractSchema'], Object);
             }
-            if (data.hasOwnProperty('features')) {
-                obj['features'] = ApiClient.convertToType(data['features'], [Feature]);
+            if (data.hasOwnProperty('interfaces')) {
+                obj['interfaces'] = ApiClient.convertToType(data['interfaces'], [ModelInterface]);
             }
         }
         return obj;
@@ -107,14 +110,18 @@ export default class Info {
     */
     flatFee = undefined;
     /**
+    * @member {String} percentFee
+    */
+    percentFee = undefined;
+    /**
     * Contract input schema in JSON Schema format.
     * @member {Object} contractSchema
     */
     contractSchema = undefined;
     /**
-    * @member {Array.<module:model/Feature>} features
+    * @member {Array.<module:model/ModelInterface>} interfaces
     */
-    features = undefined;
+    interfaces = undefined;
 
 
 

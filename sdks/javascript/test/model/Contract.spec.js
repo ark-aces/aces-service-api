@@ -60,13 +60,13 @@
       //expect(instance).to.be();
     });
 
-    it('should have the property createdAt (base name: "created_at")', function() {
+    it('should have the property createdAt (base name: "createdAt")', function() {
       // uncomment below and update the code to test the property createdAt
       //var instane = new AcesServiceApi.Contract();
       //expect(instance).to.be();
     });
 
-    it('should have the property expiresAt (base name: "expires_at")', function() {
+    it('should have the property expiresAt (base name: "expiresAt")', function() {
       // uncomment below and update the code to test the property expiresAt
       //var instane = new AcesServiceApi.Contract();
       //expect(instance).to.be();

@@ -84,14 +84,20 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property percentFee (base name: "percentFee")', function() {
+      // uncomment below and update the code to test the property percentFee
+      //var instane = new AcesServiceApi.Info();
+      //expect(instance).to.be();
+    });
+
     it('should have the property contractSchema (base name: "contractSchema")', function() {
       // uncomment below and update the code to test the property contractSchema
       //var instane = new AcesServiceApi.Info();
       //expect(instance).to.be();
     });
 
-    it('should have the property features (base name: "features")', function() {
-      // uncomment below and update the code to test the property features
+    it('should have the property interfaces (base name: "interfaces")', function() {
+      // uncomment below and update the code to test the property interfaces
       //var instane = new AcesServiceApi.Info();
       //expect(instance).to.be();
     });

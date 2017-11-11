@@ -106,8 +106,8 @@ class Contract implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'createdAt' => 'created_at',
-        'expiresAt' => 'expires_at',
+        'createdAt' => 'createdAt',
+        'expiresAt' => 'expiresAt',
         'correlationId' => 'correlationId',
         'status' => 'status',
         'results' => 'results'

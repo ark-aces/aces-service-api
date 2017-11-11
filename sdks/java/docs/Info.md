@@ -9,8 +9,9 @@ Name | Type | Description | Notes
 **instructions** | **String** | Service usage instructions in markdown format. |  [optional]
 **capacities** | [**List&lt;Capacity&gt;**](Capacity.md) |  |  [optional]
 **flatFee** | **String** |  |  [optional]
+**percentFee** | **String** |  |  [optional]
 **contractSchema** | **Object** | Contract input schema in JSON Schema format. |  [optional]
-**features** | [**List&lt;Feature&gt;**](Feature.md) |  |  [optional]
+**interfaces** | [**List&lt;ModelInterface&gt;**](ModelInterface.md) |  |  [optional]
 
 
 

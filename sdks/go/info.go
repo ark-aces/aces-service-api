@@ -24,8 +24,10 @@ type Info struct {
 
 	FlatFee string `json:"flatFee,omitempty"`
 
+	PercentFee string `json:"percentFee,omitempty"`
+
 	// Contract input schema in JSON Schema format.
 	ContractSchema *interface{} `json:"contractSchema,omitempty"`
 
-	Features []Feature `json:"features,omitempty"`
+	Interfaces []ModelInterface `json:"interfaces,omitempty"`
 }

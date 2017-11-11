@@ -8,8 +8,9 @@ Name | Type | Description | Notes
 **Instructions** | **string** | Service usage instructions in markdown format. | [optional] 
 **Capacities** | [**List&lt;Capacity&gt;**](Capacity.md) |  | [optional] 
 **FlatFee** | **string** |  | [optional] 
+**PercentFee** | **string** |  | [optional] 
 **ContractSchema** | **Object** | Contract input schema in JSON Schema format. | [optional] 
-**Features** | [**List&lt;Feature&gt;**](Feature.md) |  | [optional] 
+**Interfaces** | [**List&lt;ModelInterface&gt;**](ModelInterface.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -8,8 +8,9 @@ Name | Type | Description | Notes
 **instructions** | **string** | Service usage instructions in markdown format. | [optional] 
 **capacities** | [**\ArkAces\ServiceClient\Model\Capacity[]**](Capacity.md) |  | [optional] 
 **flatFee** | **string** |  | [optional] 
+**percentFee** | **string** |  | [optional] 
 **contractSchema** | **object** | Contract input schema in JSON Schema format. | [optional] 
-**features** | [**\ArkAces\ServiceClient\Model\Feature[]**](Feature.md) |  | [optional] 
+**interfaces** | [**\ArkAces\ServiceClient\Model\ModelInterface[]**](ModelInterface.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -41,8 +41,8 @@ class Contract(object):
 
     attribute_map = {
         'id': 'id',
-        'created_at': 'created_at',
-        'expires_at': 'expires_at',
+        'created_at': 'createdAt',
+        'expires_at': 'expiresAt',
         'correlation_id': 'correlationId',
         'status': 'status',
         'results': 'results'

@@ -36,8 +36,9 @@ class Info(object):
         'instructions': 'str',
         'capacities': 'list[Capacity]',
         'flat_fee': 'str',
+        'percent_fee': 'str',
         'contract_schema': 'object',
-        'features': 'list[Feature]'
+        'interfaces': 'list[Interface]'
     }
 
     attribute_map = {
@@ -46,11 +47,12 @@ class Info(object):
         'instructions': 'instructions',
         'capacities': 'capacities',
         'flat_fee': 'flatFee',
+        'percent_fee': 'percentFee',
         'contract_schema': 'contractSchema',
-        'features': 'features'
+        'interfaces': 'interfaces'
     }
 
-    def __init__(self, name=None, description=None, instructions=None, capacities=None, flat_fee=None, contract_schema=None, features=None):
+    def __init__(self, name=None, description=None, instructions=None, capacities=None, flat_fee=None, percent_fee=None, contract_schema=None, interfaces=None):
         """
         Info - a model defined in Swagger
         """
@@ -60,8 +62,9 @@ class Info(object):
         self._instructions = None
         self._capacities = None
         self._flat_fee = None
+        self._percent_fee = None
         self._contract_schema = None
-        self._features = None
+        self._interfaces = None
         self.discriminator = None
 
         if name is not None:
@@ -74,10 +77,12 @@ class Info(object):
           self.capacities = capacities
         if flat_fee is not None:
           self.flat_fee = flat_fee
+        if percent_fee is not None:
+          self.percent_fee = percent_fee
         if contract_schema is not None:
           self.contract_schema = contract_schema
-        if features is not None:
-          self.features = features
+        if interfaces is not None:
+          self.interfaces = interfaces
 
     @property
     def name(self):
@@ -191,6 +196,27 @@ class Info(object):
         self._flat_fee = flat_fee
 
     @property
+    def percent_fee(self):
+        """
+        Gets the percent_fee of this Info.
+
+        :return: The percent_fee of this Info.
+        :rtype: str
+        """
+        return self._percent_fee
+
+    @percent_fee.setter
+    def percent_fee(self, percent_fee):
+        """
+        Sets the percent_fee of this Info.
+
+        :param percent_fee: The percent_fee of this Info.
+        :type: str
+        """
+
+        self._percent_fee = percent_fee
+
+    @property
     def contract_schema(self):
         """
         Gets the contract_schema of this Info.
@@ -214,25 +240,25 @@ class Info(object):
         self._contract_schema = contract_schema
 
     @property
-    def features(self):
+    def interfaces(self):
         """
-        Gets the features of this Info.
+        Gets the interfaces of this Info.
 
-        :return: The features of this Info.
-        :rtype: list[Feature]
+        :return: The interfaces of this Info.
+        :rtype: list[Interface]
         """
-        return self._features
+        return self._interfaces
 
-    @features.setter
-    def features(self, features):
+    @interfaces.setter
+    def interfaces(self, interfaces):
         """
-        Sets the features of this Info.
+        Sets the interfaces of this Info.
 
-        :param features: The features of this Info.
-        :type: list[Feature]
+        :param interfaces: The interfaces of this Info.
+        :type: list[Interface]
         """
 
-        self._features = features
+        self._interfaces = interfaces
 
     def to_dict(self):
         """
