@@ -1,7 +1,7 @@
 lazy val root = (project in file(".")).
   settings(
-    organization := "io.arkaces",
-    name := "service-client",
+    organization := "com.arkaces",
+    name := "aces_service_api",
     version := "1.0.0",
     scalaVersion := "2.11.4",
     scalacOptions ++= Seq("-feature"),

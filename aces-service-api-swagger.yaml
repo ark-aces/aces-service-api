@@ -3,25 +3,23 @@ info:
   title: Aces Service API
   description: |
     API Specification for Aces Services for blockchain interoperability.
-  version: "0.1.0"
+  version: "1.0.0"
 schemes:
   - https
   - http
-basePath: /v1
 produces:
   - application/json
+tags:
+  - name: AcesService
+    description: ACES Service API
+    externalDocs:
+      url: https://ark-aces.github.io/aces-service-docs/
+  
 paths:
-  /status:
+  /:
     get:
-      summary: Get Health of node.
-      description: Get application health information.
-      responses:
-        200:
-          description: Health information.
-          schema:
-            $ref: "#/definitions/Health"
-  /info:
-    get:
+      tags:
+        - AcesService
       summary: Get Service Info.
       description: Gets Service Info object.
       responses:
@@ -29,8 +27,21 @@ paths:
           description: The Service Info object.
           schema:
             $ref: '#/definitions/Info'
+  /health:
+    get:
+      tags:
+        - AcesService
+      summary: Get Health of node.
+      description: Get application health information.
+      responses:
+        200:
+          description: Health information.
+          schema:
+            $ref: "#/definitions/Health"
   /contracts:
     post:
+      tags:
+        - AcesService
       summary: Create Service Contract
       description: Creates a new service contract.
       parameters:
@@ -46,9 +57,7 @@ paths:
                 type: string
                 description: Requestor generated globally unique identifier for correleating requests.
               arguments:
-                type: array
-                items:
-                  $ref: "#/definitions/Argument"
+                type: object
       responses:
         200:
           description: The created Service Contract object.
@@ -61,6 +70,8 @@ paths:
 
   /contracts/{id}:
     get:
+      tags:
+        - AcesService
       summary: Get Service Contract.
       description: Gets service contract info for a contract.
       parameters:
@@ -108,9 +119,12 @@ definitions:
         type: string
       percentFee:
         type: string
-      contractSchema:
+      inputSchema:
         type: object
         description: Contract input schema in JSON Schema format.
+      outputSchema:
+        type: object
+        description: Contract output schema in JSON Schema format.
       interfaces:
         type: array
         items:
@@ -136,18 +150,8 @@ definitions:
         type: string
         enum: [new, pendingPayment, rejected, expired, executed, failed]
       results:
-        type: array
-        items:
-          $ref: "#/definitions/Result"
-  Argument:
-    type: object
-    properties:
-      name:
-        type: string
-        description: Argument name matching a parameter in service contract schema.
-      value:
         type: object
-        description: Arugment value.
+        description: Contract results data.
   Health:
     type: object
     properties:
@@ -169,15 +173,6 @@ definitions:
   Interface:
     type: string
     enum: [arkSmartbridgePayable, arkReturnable]
-  Result:
-    type: object
-    properties:
-      name:
-        type: string
-        description: Result property name.
-      value:
-        type: object
-        description: Result value.
   ValidationError:
     type: object
     properties:

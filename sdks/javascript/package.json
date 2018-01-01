@@ -1,6 +1,6 @@
 {
   "name": "aces_service_api",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "API_Specification_for_Aces_Services_for_blockchain_interoperability_",
   "license": "Unlicense",
   "main": "src/index.js",

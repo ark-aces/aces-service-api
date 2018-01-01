@@ -1,6 +1,6 @@
 {
     "name": "ark-aces/aces-service-api",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "description": "",
     "keywords": [
         "swagger",
@@ -29,9 +29,9 @@
         "friendsofphp/php-cs-fixer": "~1.12"
     },
     "autoload": {
-        "psr-4": { "ArkAces\\ServiceClient\\" : "lib/" }
+        "psr-4": { "ArkAces\\AcesServiceApi\\" : "lib/" }
     },
     "autoload-dev": {
-        "psr-4": { "ArkAces\\ServiceClient\\" : "test/" }
+        "psr-4": { "ArkAces\\AcesServiceApi\\" : "test/" }
     }
 }

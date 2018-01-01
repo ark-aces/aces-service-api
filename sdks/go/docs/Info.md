@@ -9,7 +9,8 @@ Name | Type | Description | Notes
 **Capacities** | [**[]Capacity**](Capacity.md) |  | [optional] [default to null]
 **FlatFee** | **string** |  | [optional] [default to null]
 **PercentFee** | **string** |  | [optional] [default to null]
-**ContractSchema** | [***interface{}**](interface{}.md) | Contract input schema in JSON Schema format. | [optional] [default to null]
+**InputSchema** | [***interface{}**](interface{}.md) | Contract input schema in JSON Schema format. | [optional] [default to null]
+**OutputSchema** | [***interface{}**](interface{}.md) | Contract output schema in JSON Schema format. | [optional] [default to null]
 **Interfaces** | [**[]ModelInterface**](Interface.md) |  | [optional] [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

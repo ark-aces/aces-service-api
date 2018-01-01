@@ -1,4 +1,4 @@
-# ArkAces.ServiceClient.Model.Health
+# ArkAces.AcesServiceApi.Model.Health
 ## Properties
 
 Name | Type | Description | Notes

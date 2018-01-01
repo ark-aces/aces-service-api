@@ -1,4 +1,4 @@
-# ArkAces.ServiceClient.Model.NotFoundError
+# ArkAces.AcesServiceApi.Model.NotFoundError
 ## Properties
 
 Name | Type | Description | Notes

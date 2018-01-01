@@ -1,4 +1,4 @@
-# ArkAces.ServiceClient.Model.Capacity
+# ArkAces.AcesServiceApi.Model.Capacity
 ## Properties
 
 Name | Type | Description | Notes

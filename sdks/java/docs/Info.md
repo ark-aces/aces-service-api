@@ -10,7 +10,8 @@ Name | Type | Description | Notes
 **capacities** | [**List&lt;Capacity&gt;**](Capacity.md) |  |  [optional]
 **flatFee** | **String** |  |  [optional]
 **percentFee** | **String** |  |  [optional]
-**contractSchema** | **Object** | Contract input schema in JSON Schema format. |  [optional]
+**inputSchema** | **Object** | Contract input schema in JSON Schema format. |  [optional]
+**outputSchema** | **Object** | Contract output schema in JSON Schema format. |  [optional]
 **interfaces** | [**List&lt;ModelInterface&gt;**](ModelInterface.md) |  |  [optional]
 
 

@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **expiresAt** | **Date** | Date the Contract will expire. Any expired contracts will no longer attempt execution. | [optional] 
 **correlationId** | **String** | Requestor generated globally unique identifier for correleating requests. | [optional] 
 **status** | **String** |  | [optional] 
-**results** | [**[Result]**](Result.md) |  | [optional] 
+**results** | **Object** | Contract results data. | [optional] 
 
 
 <a name="StatusEnum"></a>

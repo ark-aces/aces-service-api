@@ -1,4 +1,4 @@
-# ArkAces.ServiceClient.Model.ValidationError
+# ArkAces.AcesServiceApi.Model.ValidationError
 ## Properties
 
 Name | Type | Description | Notes

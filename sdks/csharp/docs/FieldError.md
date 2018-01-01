@@ -1,4 +1,4 @@
-# ArkAces.ServiceClient.Model.FieldError
+# ArkAces.AcesServiceApi.Model.FieldError
 ## Properties
 
 Name | Type | Description | Notes

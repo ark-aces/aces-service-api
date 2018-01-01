@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **expiresAt** | [**OffsetDateTime**](OffsetDateTime.md) | Date the Contract will expire. Any expired contracts will no longer attempt execution. |  [optional]
 **correlationId** | **String** | Requestor generated globally unique identifier for correleating requests. |  [optional]
 **status** | [**StatusEnum**](#StatusEnum) |  |  [optional]
-**results** | [**List&lt;Result&gt;**](Result.md) |  |  [optional]
+**results** | **Object** | Contract results data. |  [optional]
 
 
 <a name="StatusEnum"></a>

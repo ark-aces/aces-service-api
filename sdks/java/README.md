@@ -1,4 +1,4 @@
-# service-client
+# aces_service_api
 
 ## Requirements
 
@@ -26,8 +26,8 @@ Add this dependency to your project's POM:
 
 ```xml
 <dependency>
-    <groupId>io.arkaces</groupId>
-    <artifactId>service-client</artifactId>
+    <groupId>com.arkaces</groupId>
+    <artifactId>aces_service_api</artifactId>
     <version>1.0.0</version>
     <scope>compile</scope>
 </dependency>
@@ -38,7 +38,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "io.arkaces:service-client:1.0.0"
+compile "com.arkaces:aces_service_api:1.0.0"
 ```
 
 ### Others
@@ -49,7 +49,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/service-client-1.0.0.jar
+* target/aces_service_api-1.0.0.jar
 * target/lib/*.jar
 
 ## Getting Started
@@ -58,25 +58,25 @@ Please follow the [installation](#installation) instruction and execute the foll
 
 ```java
 
-import io.arkaces.*;
-import io.arkaces.auth.*;
+import com.arkaces.*;
+import com.arkaces.auth.*;
 import io.swagger.client.model.*;
-import io.arkaces.service_client.DefaultApi;
+import com.arkaces.aces_service_api.AcesServiceApi;
 
 import java.io.File;
 import java.util.*;
 
-public class DefaultApiExample {
+public class AcesServiceApiExample {
 
     public static void main(String[] args) {
         
-        DefaultApi apiInstance = new DefaultApi();
+        AcesServiceApi apiInstance = new AcesServiceApi();
         String id = "id_example"; // String | Contract identifier.
         try {
             Contract result = apiInstance.contractsIdGet(id);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling DefaultApi#contractsIdGet");
+            System.err.println("Exception when calling AcesServiceApi#contractsIdGet");
             e.printStackTrace();
         }
     }
@@ -86,19 +86,18 @@ public class DefaultApiExample {
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://localhost/v1*
+All URIs are relative to *https://localhost*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*DefaultApi* | [**contractsIdGet**](docs/DefaultApi.md#contractsIdGet) | **GET** /contracts/{id} | Get Service Contract.
-*DefaultApi* | [**contractsPost**](docs/DefaultApi.md#contractsPost) | **POST** /contracts | Create Service Contract
-*DefaultApi* | [**infoGet**](docs/DefaultApi.md#infoGet) | **GET** /info | Get Service Info.
-*DefaultApi* | [**statusGet**](docs/DefaultApi.md#statusGet) | **GET** /status | Get Health of node.
+*AcesServiceApi* | [**contractsIdGet**](docs/AcesServiceApi.md#contractsIdGet) | **GET** /contracts/{id} | Get Service Contract.
+*AcesServiceApi* | [**contractsPost**](docs/AcesServiceApi.md#contractsPost) | **POST** /contracts | Create Service Contract
+*AcesServiceApi* | [**healthGet**](docs/AcesServiceApi.md#healthGet) | **GET** /health | Get Health of node.
+*AcesServiceApi* | [**rootGet**](docs/AcesServiceApi.md#rootGet) | **GET** / | Get Service Info.
 
 
 ## Documentation for Models
 
- - [Argument](docs/Argument.md)
  - [Capacity](docs/Capacity.md)
  - [Contract](docs/Contract.md)
  - [ContractRequest](docs/ContractRequest.md)
@@ -107,7 +106,6 @@ Class | Method | HTTP request | Description
  - [Info](docs/Info.md)
  - [ModelInterface](docs/ModelInterface.md)
  - [NotFoundError](docs/NotFoundError.md)
- - [Result](docs/Result.md)
  - [ValidationError](docs/ValidationError.md)
 
 
